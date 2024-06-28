@@ -8,7 +8,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -23,6 +23,9 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo img {
@@ -43,11 +46,13 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffc107;
+    background-color: #555;
 }
 
 #hero {
@@ -60,23 +65,34 @@ nav ul li a:hover {
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
+#hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
 section {
-    padding: 40px 0;
+    padding: 80px 0;
     text-align: center;
 }
 
 section h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 3em;
+    margin-bottom: 30px;
 }
 
 section p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.8;
+    margin-bottom: 30px;
 }
 
 .services-list {
@@ -87,17 +103,22 @@ section p {
 
 .service {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     margin: 20px;
     width: 300px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-10px);
 }
 
 .service h3 {
     color: #333;
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
 .service p {
@@ -122,15 +143,16 @@ section p {
 }
 
 .office {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1.2em;
 }
