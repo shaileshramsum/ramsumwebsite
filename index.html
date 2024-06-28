@@ -13,7 +13,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -27,36 +27,37 @@
             <p>Your partner in digital marketing and advertising solutions</p>
         </div>
     </section>
-    <services id='about'>
-        <div class="about">
+
+    <section id="about">
+        <div class="container">
             <h2>About Us</h2>
             <p>We, Ramsum Creatives is a joint venture of Shaurya Studios(Mumbai) & BSIW Production Pvt Ltd with Twig Designs. 
             We are a Marketing, Advertising and Video Production Company. We have worked with the brands & departments 
             like MDH, DS group,Tirupati Group(ayurvedic hospital & colleges) ASB systems, Samagra Shiksha(Delhi Govt),Election Commission Etc.</p>
         </div>
-    </services>
+    </section>
+
     <section id="services">
-        <div class="service">
+        <div class="container">
             <h2>Our Services</h2>
-            <ul>
-                <li>Landing Page/Website Making</li>
-                <li>Video Production (whole project) & Marketing (Social Media & TV)</li>
-                <li>Google Ads/Google My Business</li>
-                <li>Meta Ads (Facebook & Instagram) & Social Media Management</li>
-                <li>Server Side Tracking Setup</li>
-                <li>Thumbnail Making/Graphic Designing</li>
-                <li>Lead Generation</li>
-                <li>AI-Driven Content & Strategy Implementation</li>
-                <li>Surveys (Offline/Online)</li>
-                <li>Bulk Message (Email, WhatsApp & SMS)</li>
-                <li>Calling (Human & Automated)</li>
-                <li>Street Teams Advertising/Brand Awareness Etc.</li>
-            </ul>
+            <div class="services-list">
+                <div class="service">
+                    <h3>Landing Page/Website Making</h3>
+                    <p>Description of service goes here.</p>
+                    <a href="service-landing-page.html" class="btn">Read More</a>
+                </div>
+                <div class="service">
+                    <h3>Video Production & Marketing</h3>
+                    <p>Description of service goes here.</p>
+                    <a href="service-video-production.html" class="btn">Read More</a>
+                </div>
+                <!-- Add more services here -->
+            </div>
         </div>
     </section>
 
     <section id="locations">
-        <div class="location">
+        <div class="container">
             <h2>Our Offices</h2>
             <p>We have offices in Mumbai, Delhi, and Bahraich.</p>
             <div class="office">
@@ -87,7 +88,7 @@
     </section>
 
     <section id="contact">
-        <div class="contact-form">
+        <div class="container">
             <h2>Contact Us</h2>
             <form action="submit_form.php" method="POST">
                 <label for="name">Name:</label>
@@ -96,13 +97,15 @@
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Ramsum.in. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Ramsum.in. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
