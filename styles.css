@@ -8,8 +8,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
     color: #333;
+    margin: 0;
 }
 
 .container {
@@ -19,7 +20,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #343a40;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -29,7 +30,7 @@ header {
 }
 
 .logo img {
-    width: 120px;
+    width: 100px;
     height: auto;
 }
 
@@ -46,22 +47,20 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    color: #ffc107;
 }
 
 #hero {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-background.jpg');
+    background-image: url('hero-background.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 100px 0;
+    padding: 200px 0;
 }
 
 .hero-content {
@@ -69,32 +68,39 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-#hero h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 1.8em;
-    margin-bottom: 40px;
-}
-
 section {
     padding: 80px 0;
     text-align: center;
 }
 
+section#about {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+section#services {
+    background-color: #007bff;
+    color: #fff;
+}
+
+section#locations {
+    background-color: #28a745;
+    color: #fff;
+}
+
+section#contact {
+    background-color: #dc3545;
+    color: #fff;
+}
+
 section h2 {
+    margin-bottom: 40px;
     font-size: 3em;
-    margin-bottom: 30px;
-    color: #333;
 }
 
 section p {
     font-size: 1.2em;
     line-height: 1.8;
-    margin-bottom: 30px;
-    color: #666;
 }
 
 .services-list {
@@ -107,7 +113,7 @@ section p {
     background-color: #fff;
     padding: 30px;
     margin: 20px;
-    width: 300px;
+    width: calc(33.33% - 40px);
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
@@ -115,16 +121,17 @@ section p {
 
 .service:hover {
     transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
 }
 
 .service h3 {
-    color: #333;
+    color: #343a40;
     font-size: 2.2em;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .service p {
-    color: #666;
+    color: #777;
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -132,29 +139,44 @@ section p {
 
 .service .btn {
     display: inline-block;
-    background-color: #333;
-    color: #fff;
+    background-color: #ffc107;
+    color: #343a40;
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .service .btn:hover {
-    background-color: #555;
+    background-color: #ffca3b;
 }
 
 .office {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 footer {
-    background-color: #333;
+    background-color: #343a40;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
-    font-size: 1.2em;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .service {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 576px) {
+    .service {
+        width: calc(100% - 40px);
+    }
 }
